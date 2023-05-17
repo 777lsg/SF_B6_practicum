@@ -1,0 +1,8 @@
+---
+- name: "php"
+  hosts: php
+  become: yes
+
+  roles:
+    - users
+    - php

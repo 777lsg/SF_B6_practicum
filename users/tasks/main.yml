@@ -1,0 +1,14 @@
+---
+# tasks file for users
+- name: "new users"
+  user: 
+    name: user1
+    group: sudo
+    state: present
+    shell: /bin/bash
+
+- name: "key for user"
+  authorized_key:
+    user: user1
+    key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC+h37Qht6Eair1NIDdWeB4zYX/q/eOuAjmRqjgxcJQG5ZArYLARZr2xIWWHftktJ/6YR/4qfaqpyxLAuVUGLMMl0H6Wszp9MQb1fFJXw9czBoUabXtQ4JhDGEaQArACXzVD6OYBDhq6KJ0A75/tT99PPve+7EusNSw8akAf2F4Rr/HhMmDUCIy/juAmgABZCciaI9rsl3/7Od26sehuWWAOon135982emhH6j4WrqHVBH08CXT9tHjQfu5lwcGoAj5Dl7wpdBCXqNoexOBSS7+l3ytfLoTJyDsPzatOhC+KaDSr665F7dDPEbqIZ+IXzRD3Q6q5Z8iKnPCazu22bzc/icGEAbiFsgQz4lhu8TjUPRo9yrmpSZ5cjC8daR9AHVlQIwEpm8u4hJW3anib0aJFWUqdj4FodmQCI413CgJuDsO3iML7YwRAzZCbo5m2TeoMMocvDV33l/PNN4fmrPVqoCf4cKu9qWxwB6RYcYYOgqewZalab0tp0RD5j/RdfM= user@srv-ubnt-01"
+  

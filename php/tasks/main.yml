@@ -1,0 +1,21 @@
+---
+# tasks file for php
+- name: "update"
+  apt:
+    update_cache: yes
+
+- name: "install php"
+  apt:
+    name:
+      - php
+      - php-fpm
+    state: present
+
+- name:
+  copy:
+    src: www.conf
+    dest: /etc/php/7.4/fpm/pool.d/www.conf
+  notify: reload_php
+
+ 
+    

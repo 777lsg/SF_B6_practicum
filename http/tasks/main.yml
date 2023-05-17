@@ -1,0 +1,18 @@
+---
+# tasks file for http
+- name: "update"
+  apt:
+    update_cache: yes
+
+- name: "install nginx"
+  apt:
+    name:
+      - nginx
+    state: present
+
+- name: "copy file"
+  copy:
+    src: default
+    dest: /etc/nginx/sites-available/default
+  notify: reload_nginx  
+
